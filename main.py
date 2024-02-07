@@ -33,13 +33,19 @@ def title_matching(request):
     embeddings = np.load("embeddings.npy")
 
     # find matching title
-    if request_json and 'title' in request_json:
-        title = request_json['title']
+    if request_json and "title" in request_json:
+        title = request_json["title"]
         vector = get_embedding(title)
-        # vector = embeddings[::,[10]]
         scalar_products = np.dot(embeddings.T, vector)
         max_index = np.argmax(scalar_products)
-
-    matching_title = titles[max_index]
-
-    return f'{matching_title}!'
+        matching_title = titles[max_index]
+    elif request_args and "title" in request_args:
+        title = request_json["title"]
+        vector = get_embedding(title)
+        scalar_products = np.dot(embeddings.T, vector)
+        max_index = np.argmax(scalar_products)
+        matching_title = titles[max_index]
+    else:
+        matching_title = "No match found!"
+    
+    return f"{matching_title}"
