@@ -1,0 +1,31 @@
+openapi: 3.1.0
+info:
+  title: Title Matching API
+  description: API retrieving a matching title for given title
+  version: 1.0.0
+servers:
+  - url: https://europe-west3-serverless-apis-410809.cloudfunctions.net
+paths:
+  /title-matching:
+    post:
+      operationId: titleMatch
+      summary: Retrieve a matching title
+      description: Retrieve a matching title
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+              required:
+                - title
+      responses:
+        '200':
+          description: Message received and stored
+          content:
+            text/plain:
+              schema:
+                type: string
