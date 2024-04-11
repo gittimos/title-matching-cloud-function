@@ -9,4 +9,4 @@ Blog post: [How to create a CustomGPT with actions](https://moritzstrube.substac
 Cloud function to find the best matching job title from a list of job titles for a title.
 
 ## Open API schema
-The schema allow easy setup of an action in a CustomGPT.
+The [OpenAPI schema](https://spec.openapis.org/oas/v3.1.0) allow easy setup of an action in a CustomGPT.
