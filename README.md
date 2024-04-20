@@ -9,7 +9,7 @@ Blog post: [How to create a CustomGPT with actions](https://moritzstrube.substac
 Cloud function to find the best matching job title from a list of job titles for a title.
 
 ## Files in Cloud Storage
-Create a bucket called `embeddingdata`and upload the files `titles.txt` and `embeddings.npy` in this bucket.
+Create a bucket called `embeddingdata` and upload the files `titles.txt` and `embeddings.npy` in this bucket.
 
 ## Open API schema
 The [OpenAPI schema](https://spec.openapis.org/oas/v3.1.0) allow easy setup of an action in a CustomGPT.
